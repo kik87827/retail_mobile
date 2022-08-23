@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/dynamicListener.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<header class="header_wrap">
+			<h1 class="toplogo">
+				<a href="#" class="toplogo_link">
+					<div class="toplogo_main">유통데이터 서비스 플랫폼</div>
+					<div class="toplogo_sub">Retail Data Service Platform</div>
+				</a>
+			</h1>
+			<div class="header_util_wrap">
+				<a href="#" class="btn_util ico_login"><span class="hdtext">로그인</span></a>
+				<a href="#" class="btn_util ico_menu"><span class="hdtext">메뉴열기</span></a>
+			</div>
+			<!-- mobile_menu -->
+			<div class="mobile_mainmenu_zone">
+				<div class="mobile_mainmenu_wrap">
+					<div class="mbutil_row">
+						<div class="toplogo">
+							<a href="#" class="toplogo_link">
+								<div class="toplogo_main">유통데이터 서비스 플랫폼</div>
+								<div class="toplogo_sub">Retail Data Service Platform</div>
+							</a>
+						</div>
+					</div>
+					<div class="mbmenu_row">
+						<div class="mbmenu_tab_cols">
+							<ul class="mbmenu_tab_list">
+								<li class="active" id="mbtab_01"><a href="#mbmenu_cont01" class="mbmenu_tab">사업소개</a></li>
+								<li id="mbtab_02"><a href="#mbmenu_cont02" class="mbmenu_tab">유통데이터<br>서비스</a></li>
+								<li id="mbtab_03"><a href="#mbmenu_cont03" class="mbmenu_tab">데이터 활용</a></li>
+								<li id="mbtab_04"><a href="#mbmenu_cont04" class="mbmenu_tab">소식</a></li>
+							</ul>
+						</div>
+						<div class="mbmenu_list_cols">
+							<div class="mbmenu_list_wrap active" id="mbmenu_cont01">
+								<ul class="mbmenu_list">
+									<li><a href="#" class="mbmenu_one">유통데이터 소개</a></li>
+								</ul>
+							</div>
+							<div class="mbmenu_list_wrap" id="mbmenu_cont02">
+								<ul class="mbmenu_list">
+									<li><a href="#" class="mbmenu_one">상품 정보 조회</a></li>
+									<li class="has_two">
+										<a href="#" class="mbmenu_one">인기상품 트렌드</a>
+										<ul class="mbmenu_two_list">
+											<li><a href="#" class="mbmenu_two">오프라인 인기상품 리스트</a></li>
+											<li><a href="#" class="mbmenu_two">온라인 인기상품 리스트</a></li>
+										</ul>
+									</li>
+									<li><a href="#" class="mbmenu_one">소비자 구매 트렌드</a></li>
+									<li><a href="#" class="mbmenu_one">자연어/약어/감성정보</a></li>
+									<li><a href="#" class="mbmenu_one">상품 구색추천</a></li>
+									<li><a href="#" class="mbmenu_one">중소매장 매출 분석정보</a></li>
+									<li><a href="#" class="mbmenu_one">유통데이터 거래 플랫폼</a></li>
+									<li><a href="#" class="mbmenu_one">유통데이터 법률지원 서비스</a></li>
+									<li><a href="#" class="mbmenu_one">교육/행사</a></li>
+									<li><a href="#" class="mbmenu_one">HS-Code조회</a></li>
+								</ul>
+							</div>
+							<div class="mbmenu_list_wrap active" id="mbmenu_cont03">
+								<ul class="mbmenu_list">
+									<li><a href="#" class="mbmenu_one">데이터 활용 요청</a></li>
+								</ul>
+							</div>
+							<div class="mbmenu_list_wrap active" id="mbmenu_cont04">
+								<ul class="mbmenu_list">
+									<li><a href="#" class="mbmenu_one">공지사항/자료실</a></li>
+									<li><a href="#" class="mbmenu_one">유통시장동향 레포트</a></li>
+									<li><a href="#" class="mbmenu_one">FAQ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="btn_mbmenuclose"><span class="hdtext">메인메뉴 닫기</span></a>
+				</div>
+			</div>
+			<!-- // mobile_menu -->
+		</header>
+		<section class="middle_wrap">
+			<a href="#" class="btn_guide" id="btn_popup_open_call">popup 오픈</a>
+			<!-- popup -->
+			<div class="popup_wrap" id="samplePopup">
+				<div class="bg_dim"></div>
+				<div class="popup_item">
+					<div class="popup_titlelow">
+						<h3 class="popup_title">타이틀</h3>
+					</div>
+					<div class="popup_contentlow">
+						<div class="pcont_inwrap">
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.
+						</div>
+					</div>
+					<div class="popup_btnlow">
+						<div class="btn_submitbox_w">
+							<a href="javascript:;" class="btn_submitbox dtype2 close_trigger">확인</a> <!-- close_trigger 있으면 닫기 -->
+							<a href="javascript:;" class="btn_submitbox close_trigger">취소</a><!-- close_trigger 있으면 닫기 -->
+						</div>
+					</div>
+					<a href="javascript:;" class="btn_popup_close"><span class="hdtext">닫기</span></a>
+				</div>
+			</div>
+			<!-- // popup -->
+			<script>
+				popupCall();
+				document.addEventListener("DOMContentLoaded", function() {
+					popupCall();
+				});
+
+				function popupCall() {
+					var designPopup = new DesignPopup({
+						selector: "#samplePopup"
+					});
+				}
+			</script>
+		</section>
+		<footer class="footer_wrap">
+			<div class="footer_menu_row">
+				<div class="footer_menu_long">
+					<div class="dropmenu_item">
+						<a href="javascript:;" class="dropmenu_call" name="family_drop">Family Site</a>
+						<div class="dropmenu_option_list_wrap">
+							<ul class="dropmenu_option_list">
+								<li><a href="javascript:;" class="dropmenu_option" target="_blank">산업통상지원부</a></li>
+								<li><a href="javascript:;" class="dropmenu_option" target="_blank">대한상공회의소</a></li>
+								<li><a href="javascript:;" class="dropmenu_option" target="_blank">유통물류진흥원</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer_menu_short">
+					<ul class="footer_menu_list">
+						<li><a href="#" class="footer_menu">개인정보 처리 방침</a></li>
+						<li><a href="#" class="footer_menu">PC버전</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_logo_row">
+				<ul class="partner_logo_list">
+					<li><a href="#" class="partner_logo" target="_blank"><img src="./images/logo_industry_m.png" alt="산업통상자원부"></a></li>
+					<li><a href="#" class="partner_logo" target="_blank"><img src="./images/logo_korea_m.png" alt="대한상공회의소"></a></li>
+				</ul>
+			</div>
+			<div class="footer_copy_row">
+				<address class="footer_copy">서울시 중구 세종대로 39 상공회의소회관 17층 대한상공회의소 유통물류진흥원(GS1 KOREA) KCCI B/D, 39, SEJONGDAERO,</address>
+				<p class="footer_copy">JUNG-GU, SEOUL, KOREA. COPYRIGHT(C) 2021 KCCI. GS1 KOREA. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="footer_partner_row">
+				<p class="footer_partner_title">[콘텐츠 | 사업제휴 문의]</p>
+				<ul class="footer_partner_list">
+					<li>
+						<p class="footer_partner_label">대표전화</p>
+						<div class="footer_partner_content"><a href="tel:02-6050-1482" class="footer_sublink">02-6050-1482</a></div>
+					</li>
+					<li>
+						<p class="footer_partner_label"></p>
+						<div class="footer_partner_content"><a href="mailto:notnull@korcham.net" class="footer_sublink">notnull@korcham.net</a></div>
+					</li>
+				</ul>
+			</div>
+			<p class="footer_end_copy">유통데이터 서비스 플랫폼의 모든 콘텐츠는 저작권법의 보호를 받은바, 무단 전재, 복사, 배포 등을 금합니다.</p>
+		</footer>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('./include/head.html')
+</head>
+<body class="front_body">
+	<div class="page_wrap">
+		@@include('./include/header.html')
+		<section class="middle_wrap">
+			<a href="#" class="btn_guide" id="btn_modal_alert_call">alert 오픈</a>
+			<a href="#" class="btn_guide" id="btn_modal_confirm_call">confirm 오픈</a>
+		</section>
+		<script>
+			alertCall();
+			document.querySelector("#btn_modal_alert_call").addEventListener("click", ()=> {
+				alertCall();
+			},false);
+			document.querySelector("#btn_modal_confirm_call").addEventListener("click", ()=> {
+				confirmCall();
+			},false);
+
+			function alertCall(){
+				var designAlert = new DesignModal({
+					type: "alert", // alert, confirm
+					message: "alert 테스트",
+					identify_callback: function() {
+						console.log('확인');
+					}
+				})
+			}
+
+			function confirmCall(){
+				var designConfirm = new DesignModal({
+					type: "confirm", // alert, confirm
+					message: "confirm 테스트",
+					identify_callback: function() {
+						console.log('확인');
+					},
+					cancel_callback: function() {
+						console.log('취소');
+					}
+				})
+			}
+
+			// 강제로 닫기 designAlert.removeHide();
+		</script>
+		@@include('./include/footer.html')
+	</div>
+</body>
+</html>
