@@ -5,3 +5,9 @@
     $remValue: math.div($value, 16) + rem;	
     @return $remValue;
 }
+
+
+@mixin fontTransform {
+    transform: skew(.5deg);
+}
+

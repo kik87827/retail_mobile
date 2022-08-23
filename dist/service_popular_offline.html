@@ -97,43 +97,54 @@
 			<!-- // mobile_menu -->
 		</header>
 		<section class="middle_wrap">
-			<a href="#" class="btn_guide" id="btn_modal_alert_call">alert 오픈</a>
-			<a href="#" class="btn_guide" id="btn_modal_confirm_call">confirm 오픈</a>
+			<div class="sub_title_row">
+				<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
+				<h2 class="sub_title">상품 정보 조회</h2>
+			</div>
+			<div class="sub_content_row">
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.<br>
+				내용이 들어갑니다.
+			</div>
+			<script>
+				rockMenu("#mbtab_02", "#mbmenu_02_02", "#mbmenu_02_02_01")
+			</script>
 		</section>
-		<script>
-			alertCall();
-			document.querySelector("#btn_modal_alert_call").addEventListener("click", () => {
-				alertCall();
-			}, false);
-			document.querySelector("#btn_modal_confirm_call").addEventListener("click", () => {
-				confirmCall();
-			}, false);
-
-			function alertCall() {
-				var designAlert = new DesignModal({
-					type: "alert", // alert, confirm
-					message: "alert 테스트",
-					identify_callback: function() {
-						console.log('확인');
-					}
-				})
-			}
-
-			function confirmCall() {
-				var designConfirm = new DesignModal({
-					type: "confirm", // alert, confirm
-					message: "confirm 테스트",
-					identify_callback: function() {
-						console.log('확인');
-					},
-					cancel_callback: function() {
-						console.log('취소');
-					}
-				})
-			}
-
-			// 강제로 닫기 designAlert.removeHide();
-		</script>
 		<footer class="footer_wrap">
 			<div class="footer_menu_row">
 				<div class="footer_menu_long">

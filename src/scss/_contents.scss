@@ -95,10 +95,10 @@ input.btn_submitbox{}
     }
 } 
 .dropmenu_option_list{
-    background:#fff;border:1px solid #bcbcbc;
+    background:#fff;border:1px solid #bcbcbc;position:relative;overflow:hidden;
     > li{}
 } 
 .dropmenu_option{
-    display:block;font-size:14px;line-height:1.2;color:#191919;padding:rem(10) rem(8);
+    display:block;font-size:14px;line-height:1.2;color:#191919;padding:rem(10) rem(8); transform: skew(.5deg);
     &:hover{background:#f6f8f9;}
 }
