@@ -10,7 +10,42 @@
 				<div class="page_popup_box">
 					<h1 class="page_popup_title">로그인</h1>
 					<div class="page_popup_content">
-						내용
+						<p class="title_sub_copy">보다 다양한 서비스 제공을 위해 <br>추가정보를 입력해주세요.</p>
+						<ul class="vertical_item_list mt30" id="login_add_form">
+							<li>
+								<div clsas="vertical_item_title">
+									<div class="formitem">
+										<input type="radio" class="check_item" name="kind" id="company" checked>
+										<label for="company" class="formitem_label">기업</label>
+									</div>
+								</div>
+								<div class="vertical_item_content" id="company_addform">
+									<input type="text" class="form_input" placeholder="기업명을 입력하세요.">
+								</div>
+							</li>
+							<li>
+								<div clsas="vertical_item_title">
+									<div class="formitem">
+										<input type="radio" class="check_item" name="kind" id="personal">
+										<label for="personal" class="formitem_label">개인</label>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="btn_submitquad_wrap"><a href="#" class="btn_submitquad">시작하기</a></div>
+						<script>
+							document.querySelectorAll("#login_add_form .check_item").forEach((element) => {
+								element.addEventListener("click",(e) => {
+									let thisObj = e.currentTarget;
+									let thisObjId = thisObj.getAttribute("id");
+									if(thisObjId == "company" && thisObj.checked){
+										document.querySelector("#company_addform .form_input").disabled = false;
+									}else{
+										document.querySelector("#company_addform .form_input").disabled = true;
+									}
+								},false);
+							});
+						</script>
 					</div>
 					<a href="javascript:;" class="btn_page_popup_close"><span class="hdtext">닫기</span></a>
 				</div>

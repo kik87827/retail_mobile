@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
   commonInit();
-  dropMenu();
   commonLayout();
   commonEvent();
+  dropMenu();
 });
-
+window.addEventListener("load",function(){
+});
 
 function commonInit() {
   let touchstart = "ontouchstart" in window;
@@ -385,14 +386,16 @@ function dropMenu(){
   let pagewrap = document.querySelector(".page_wrap");
   let dropmenu_call = document.querySelectorAll(".dropmenu_call");
   let dropmenu_option_list_wrap_active = null;
+
+  dropMenuReady(dropmenu_call);
   addDynamicEventListener(document.body, 'click', '.dropmenu_call', function (e) {
       let thisTarget = e.target;
       let thisTargetName  = thisTarget.getAttribute("name");
       let thisTargetOption = null;
-      dropMenuReady(dropmenu_call);
       thisTargetOption = document.querySelector(`[data-dropmenu='${thisTargetName}']`);
       thisTargetOption.classList.toggle("active");
   });
+ 
   document.body.addEventListener("click", (e)=> {
     if(e.target.closest(".dropmenu_item") !== null || e.target.closest(".dropmenu_option_list_wrap") !== null ){return;}
     dropmenu_option_list_wrap_active = document.querySelectorAll(".dropmenu_option_list_wrap.active");
@@ -425,7 +428,7 @@ function dropMenuCssAction(){
     let thisObjData = thisObj.getAttribute("data-dropmenu");
     let targetObj = document.querySelector(`[name='${thisObjData}']`);
     if(targetObj !== null){
-      thisObj.style.top = (targetObj.getBoundingClientRect().top+targetObj.getBoundingClientRect().height) + "px";
+      thisObj.style.top = (targetObj.getBoundingClientRect().top+window.scrollY+targetObj.getBoundingClientRect().height) + "px";
       thisObj.style.left = (targetObj.getBoundingClientRect().left-1) + "px";
       thisObj.style.width = (targetObj.getBoundingClientRect().width+2) + "px";
     }
@@ -443,4 +446,52 @@ function siblings(t) {
   return tempArr.filter((e)=>{
     return e != t;
   });
+}
+
+
+// main
+function popularRankFunc(){
+	let popularRank = null;
+	const mc_popular_slide = document.querySelectorAll(".mc_popular_container .swiper-slide");
+	if(mc_popular_slide.length<=1){return;}
+	if(popularRank === null){
+		popularRank = new Swiper(".mc_popular_container", {
+			autoHeight : true,
+			direction: "vertical",
+			resistanceRatio: '0',
+			allowTouchMove: false,
+			loop : true,
+			speed : 520,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+		});
+    // popularRank.slideTo(2);
+	}else {
+		popularRank.update();
+	}
+}
+
+
+function consumerRankFunc(){
+	let consumerRank = null;
+	const mc_consumer_slide = document.querySelectorAll(".mc_consumer_container .swiper-slide");
+	if(mc_consumer_slide.length<=1){return;}
+	if(consumerRank === null){
+		consumerRank = new Swiper(".mc_consumer_container", {
+			autoHeight : true,
+			direction: "vertical",
+			resistanceRatio: '0',
+			allowTouchMove: false,
+			loop : true,
+			speed : 520,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+		});
+	}else {
+		consumerRank.update();
+	}
 }

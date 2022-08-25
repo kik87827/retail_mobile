@@ -7,8 +7,48 @@
 	<div class="page_wrap">
 		@@include('./include/header.html')
 		<section class="middle_wrap">
-			내용이 들어갑니다.
+			<div class="sub_title_row">
+				<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
+				<h2 class="sub_title">컴포넌트</h2>
+			</div>
+			<div class="source_his_item_wrap">
+				<!-- source_his_item -->
+				<div class="source_his_item">
+					<p class="component_title">form element</p>
+					<div class="component_dep_wrap">
+						<ul class="formitem_list">
+							<li>
+								<div class="formitem">
+									<input type="radio" class="check_item" name="kind" id="company">
+									<label for="company" class="formitem_label">기업</label>
+								</div>
+							</li>
+							<li>
+								<div class="formitem">
+									<input type="radio" class="check_item" name="kind" id="personal">
+									<label for="personal" class="formitem_label">개인</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // source_his_item -->
+			</div>
 		</section>
+		<script>
+			var htmlArray = [],
+				reverseArray = [];
+			$(window).on("load", function() {
+				cmaTextareaSize();
+			});
+
+			function cmaTextareaSize(obj, bsize) { // 객체명, 기본사이즈
+				var sTextarea = $(".textarea_size");
+				sTextarea.each(function() {
+					$(this).css("height", $(this)[0].scrollHeight);
+				});
+			}
+		</script>
 		@@include('./include/footer.html')
 	</div>
 </body>
