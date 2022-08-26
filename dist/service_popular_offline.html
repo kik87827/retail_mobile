@@ -99,7 +99,7 @@
 		<section class="middle_wrap">
 			<div class="sub_title_row">
 				<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
-				<h2 class="sub_title">상품 정보 조회</h2>
+				<h2 class="sub_title">오프라인 인기상품 리스트</h2>
 			</div>
 			<div class="sub_content_row">
 				내용이 들어갑니다.<br>
@@ -142,9 +142,143 @@
 				내용이 들어갑니다.
 			</div>
 			<script>
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				document.addEventListener("DOMContentLoaded", function() {
+					if (url_2 === "layer_show") {
+						let detail_popup = new DesignPopup({
+							selector: "#detail_popup"
+						});
+					} else if (url_2 === "layer_show2") {
+						let service_info_popup = new DesignPopup({
+							selector: "#service_info_popup"
+						});
+					}
+					document.querySelector(".quick_obj.type2").addEventListener("click", () => {
+						let service_info_popup = new DesignPopup({
+							selector: "#service_info_popup"
+						});
+					}, false);
+				});
+			</script>
+			<script>
 				rockMenu("#mbtab_02", "#mbmenu_02_02", "#mbmenu_02_02_01")
 			</script>
 		</section>
+		<!-- popup -->
+		<div class="popup_wrap" id="detail_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">상품 조회 결과</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="service_info_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">서비스 개요</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+		<!-- quick_layer -->
+		<div class="quick_layer_wrap">
+			<a href="javascript:;" class="quick_obj type2"><span class="quick_text">?</span></a>
+		</div>
+		<!-- // quick_layer -->
 		<footer class="footer_wrap">
 			<div class="footer_menu_row">
 				<div class="footer_menu_long">
@@ -161,7 +295,7 @@
 				</div>
 				<div class="footer_menu_short">
 					<ul class="footer_menu_list">
-						<li><a href="#" class="footer_menu">개인정보 처리 방침</a></li>
+						<li><a href="javascript:;" class="footer_menu" id="popup_call_person">개인정보 처리 방침</a></li>
 						<li><a href="#" class="footer_menu">PC버전</a></li>
 					</ul>
 				</div>
@@ -191,6 +325,69 @@
 			</div>
 			<p class="footer_end_copy">유통데이터 서비스 플랫폼의 모든 콘텐츠는 저작권법의 보호를 받은바, 무단 전재, 복사, 배포 등을 금합니다.</p>
 		</footer>
+		<!-- 개인정보처리방침 -->
+		<div class="popup_wrap" id="person_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">개인정보처리방침</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // 개인정보처리방침 -->
+		<script>
+			document.querySelector("#popup_call_person").addEventListener("click", (e) => {
+				e.preventDefault();
+				var personPopup = new DesignPopup({
+					selector: "#person_popup"
+				});
+			});
+		</script>
 	</div>
 </body>
 

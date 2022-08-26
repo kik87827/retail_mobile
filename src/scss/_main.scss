@@ -75,7 +75,7 @@ input.mv_searchinput{height:13.333vw;line-height:1;padding:0 4.444vw;box-sizing:
     padding: rem(32) rem(16);
     box-shadow: 0 0 rem(6) 0 rgba(12, 74, 150, 0.22);
     background-color: #fff;
-    &.type2{padding:rem(22) rem(16) rem(26)}
+    &.type2{padding:rem(22) rem(16) rem(20)}
     &.mc_linkage_box{}
 }
 .mc_text_tab_list{
@@ -156,17 +156,24 @@ input.mv_searchinput{height:13.333vw;line-height:1;padding:0 4.444vw;box-sizing:
 
 
 .mc_board_list_wrap{border-top:2px solid #0c4a96;}
-.mc_board_tabcont{}
+.mc_board_tabcont{
+    display:none;
+    &.active{display:block;}
+}
 .mc_board_list{
+    height:rem(257);
     > li{
+        background:url("../images/dash_line.png") repeat-x 0 100%/auto rem(2);padding:rem(15) 0;
         &.nodata_li{
+            display:flex;align-items: center;justify-content: center;text-align:center;height:100%;
         }
-        &:last-of-type{}
+        &:last-of-type{background:none;}
     }
 }
-.nodata_para{}
-.quick_layer_wrap{}
-.quick_obj{}
+.nodata_para{font-size:rem(14);color:#191919;@include fontTransform;}
+
+.mc_board_item{display:flex;align-items: center;}
+.mc_board_main{display:inline-block;@include fontTransform;font-size:rem(14);color:#191919;white-space: nowrap; text-overflow: ellipsis;overflow:hidden;position:relative; max-width:99%;}
 
 @media(min-width:420px){
     .main_visual_row{padding:rem(40) rem(16) rem(116);background-size:100% auto;}

@@ -150,7 +150,7 @@
 				</div>
 				<div class="footer_menu_short">
 					<ul class="footer_menu_list">
-						<li><a href="#" class="footer_menu">개인정보 처리 방침</a></li>
+						<li><a href="javascript:;" class="footer_menu" id="popup_call_person">개인정보 처리 방침</a></li>
 						<li><a href="#" class="footer_menu">PC버전</a></li>
 					</ul>
 				</div>
@@ -180,6 +180,69 @@
 			</div>
 			<p class="footer_end_copy">유통데이터 서비스 플랫폼의 모든 콘텐츠는 저작권법의 보호를 받은바, 무단 전재, 복사, 배포 등을 금합니다.</p>
 		</footer>
+		<!-- 개인정보처리방침 -->
+		<div class="popup_wrap" id="person_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">개인정보처리방침</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // 개인정보처리방침 -->
+		<script>
+			document.querySelector("#popup_call_person").addEventListener("click", (e) => {
+				e.preventDefault();
+				var personPopup = new DesignPopup({
+					selector: "#person_popup"
+				});
+			});
+		</script>
 	</div>
 </body>
 

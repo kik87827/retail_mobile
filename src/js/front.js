@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   commonLayout();
   commonEvent();
   dropMenu();
+  quickLayer();
 });
 window.addEventListener("load",function(){
 });
@@ -494,4 +495,74 @@ function consumerRankFunc(){
 	}else {
 		consumerRank.update();
 	}
+}
+
+
+function mainTabFunc(){
+  let d_mctab = document.querySelectorAll(".d_tab_group");
+  console.log();
+  d_mctab.forEach((group) => {
+    let thisGroup = group;
+    let thisGroupTab = thisGroup.querySelectorAll(".mc_text_tab");
+    thisGroupTab.forEach((tab)=>{
+      tab.addEventListener("click",(e)=>{
+        e.preventDefault();
+        let thisObj = e.currentTarget;
+        let thisObjParent = thisObj.closest("li");
+        let thisObjTarget = document.querySelector(thisObj.getAttribute("href"));
+        let thisObjTargetNot = siblings(thisObjTarget);
+        let thisObjNot = siblings(thisObjParent);
+        if(thisObjTarget !== null){
+          thisObjNot.forEach((element)=> {
+            element.classList.remove("active");
+          });
+          thisObjParent.classList.add("active");
+
+          thisObjTargetNot.forEach((element) => {
+            element.classList.remove("active");
+          });
+          thisObjTarget.classList.add("active");
+        }
+      },false);
+    });
+  });
+}
+
+function quickLayer(){
+  let quick_layer_wrap = document.querySelector(".quick_layer_wrap");
+  let quick_layer_item = document.querySelector(".quick_obj");
+  let motionTime = 0;
+  if(quick_layer_wrap === null){return;}
+  window.addEventListener("scroll",(e)=>{
+   if(window.scrollY >= document.querySelector("body").scrollHeight - window.innerHeight){
+    hideMotion();
+   }else{
+    showMotion();
+   }
+  },false);
+
+
+  function showMotion(){
+    let count = 0;
+    let timeoutNum = 0;
+    if(count >2){return;}
+    // if(timeoutNum){clearTimeout(timeoutNum)}
+      quick_layer_wrap.style.display = "block";
+      // timeoutNum = setTimeout(()=>{
+      //  quick_layer_wrap.classList.remove("opacity_hidden");
+      // },510);
+    count ++;
+  }
+
+  function hideMotion(){
+  let count = 0;
+  let timeoutNum = 0;
+    if(count >2){return;}
+    // if(timeoutNum){clearTimeout(timeoutNum)}
+    // quick_layer_wrap.classList.add("opacity_hidden");
+    //  timeoutNum = setTimeout(()=>{
+    // },510);
+      quick_layer_wrap.style.display = "none";
+    count ++;
+  }
 }

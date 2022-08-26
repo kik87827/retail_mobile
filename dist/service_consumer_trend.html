@@ -99,7 +99,7 @@
 		<section class="middle_wrap">
 			<div class="sub_title_row">
 				<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
-				<h2 class="sub_title">타이틀</h2>
+				<h2 class="sub_title">소비자 구매 트렌드</h2>
 			</div>
 			<div class="sub_content_row">
 				내용이 들어갑니다.<br>
@@ -151,9 +151,138 @@
 				내용이 들어갑니다.
 			</div>
 			<script>
-				rockMenu("#mbtab_01", "#mbmenu_01_01")
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				document.addEventListener("DOMContentLoaded", function() {
+					if (url_2 === "layer_show") {
+						let trend_current_popup = new DesignPopup({
+							selector: "#trend_current_popup"
+						});
+					} else if (url_2 === "layer_show2") {
+						let service_info_popup = new DesignPopup({
+							selector: "#service_info_popup"
+						});
+					}
+					document.querySelector(".quick_obj.type2").addEventListener("click", () => {
+						let service_info_popup = new DesignPopup({
+							selector: "#service_info_popup"
+						});
+					}, false);
+				});
+			</script>
+			<script>
+				rockMenu("#mbtab_02", "#mbmenu_02_03")
 			</script>
 		</section>
+		<!-- popup -->
+		<div class="popup_wrap" id="trend_current_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">트렌드 추이</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="service_info_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">서비스 개요</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
 		<!-- quick_layer -->
 		<div class="quick_layer_wrap">
 			<a href="javascript:;" class="quick_obj type2"><span class="quick_text">?</span></a>
