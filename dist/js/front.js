@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
   commonEvent();
   dropMenu();
   quickLayer();
+  mainVisual();
+  subSearchForm();
 });
 window.addEventListener("load", function() {});
 
@@ -41,7 +43,8 @@ function commonLayout() {
       btn_mbmenuclose = document.querySelector(".btn_mbmenuclose"),
       domHtml = document.querySelector("html"),
       domBody = document.querySelector("body"),
-      mbmenu_tab = document.querySelectorAll(".mbmenu_tab");
+      mbmenu_li = document.querySelectorAll(".mbmenu_list > li");
+    mbmenu_tab = document.querySelectorAll(".mbmenu_tab");
     hasToggle_menu = document.querySelectorAll(".has_two .mbmenu_one");
 
     // init 
@@ -97,10 +100,13 @@ function commonLayout() {
         e.preventDefault();
         let thisObj = e.currentTarget;
         let thisObjParent = thisObj.closest("li");
-        let thisObjParentSiblings = siblings(thisObjParent);
+        // let thisObjParentSiblings = siblings(thisObjParent);
         let thisObjMenuList = thisObj.nextElementSibling;
 
-        thisObjParentSiblings.forEach((element) => {
+        // thisObjParentSiblings.forEach((element)=>{
+        //   element.classList.remove("active");
+        // });
+        mbmenu_li.forEach((element) => {
           element.classList.remove("active");
         });
 
@@ -462,8 +468,24 @@ function siblings(t) {
   });
 }
 
-
 // main
+function mainVisual() {
+  let mv_searchinput = document.querySelector(".mv_searchinput");
+  if (mv_searchinput === null) {
+    return;
+  }
+  mv_searchinput.addEventListener("focus", (e) => {
+    let thisObj = e.currentTarget;
+    let thisObjParent = thisObj.closest(".mv_searchform");
+    thisObjParent.classList.add("active");
+  }, false);
+  mv_searchinput.addEventListener("focusout", (e) => {
+    let thisObj = e.currentTarget;
+    let thisObjParent = thisObj.closest(".mv_searchform");
+    thisObjParent.classList.remove("active");
+  }, false);
+}
+
 function popularRankFunc() {
   let popularRank = null;
   const mc_popular_slide = document.querySelectorAll(".mc_popular_container .swiper-slide");
@@ -517,7 +539,6 @@ function consumerRankFunc() {
 
 function mainTabFunc() {
   let d_mctab = document.querySelectorAll(".d_tab_group");
-  console.log();
   d_mctab.forEach((group) => {
     let thisGroup = group;
     let thisGroupTab = thisGroup.querySelectorAll(".mc_text_tab");
@@ -547,8 +568,6 @@ function mainTabFunc() {
 
 function quickLayer() {
   let quick_layer_wrap = document.querySelector(".quick_layer_wrap");
-  let quick_layer_item = document.querySelector(".quick_obj");
-  let motionTime = 0;
   if (quick_layer_wrap === null) {
     return;
   }
@@ -587,5 +606,104 @@ function quickLayer() {
     // },510);
     quick_layer_wrap.style.display = "none";
     count++;
+  }
+}
+
+
+function scToggleList() {
+  const sc_toggle_li = document.querySelectorAll(".sc_toggle_list > li");
+  const htmlObj = document.querySelector("html");
+  const header = document.querySelector(".header_wrap");
+  let headerHeight = header !== undefined ? header.getBoundingClientRect().height : 0;
+  if (sc_toggle_li.length) {
+    htmlObj.classList.add("smooth");
+    sc_toggle_li.forEach((element) => {
+      let thisLiObj = element;
+      let thisLiObjNot = siblings(thisLiObj);
+      let thisLiObjBar = thisLiObj.querySelector(".sc_toggle_bar");
+      thisLiObjBar.addEventListener("click", (e) => {
+        e.preventDefault();
+        thisLiObjNot.forEach((element) => {
+          element.classList.remove("active");
+        });
+        thisLiObj.classList.toggle("active");
+        if (thisLiObj.classList.contains("active")) {
+          window.scrollTo(0, thisLiObj.getBoundingClientRect().top + window.scrollY - headerHeight);
+        }
+      }, false);
+    });
+  }
+}
+
+
+function subSearchForm() {
+  let sc_search_input = document.querySelector(".sc_search_input");
+  if (sc_search_input === null) {
+    return;
+  }
+  sc_search_input.addEventListener("focus", (e) => {
+    let thisObj = e.currentTarget;
+    let thisObjParent = thisObj.closest(".sc_search_form");
+    thisObjParent.classList.add("active");
+  }, false);
+  sc_search_input.addEventListener("focusout", (e) => {
+    let thisObj = e.currentTarget;
+    let thisObjParent = thisObj.closest(".sc_search_form");
+    thisObjParent.classList.remove("active");
+  }, false);
+}
+
+function tabmenuActionFunc(target) {
+  let targetObj = document.querySelectorAll(target);
+  //let targetObjNot = siblings(targetObj);
+  if (targetObj.length) {
+    // targetObjNot.forEach((element) => {
+    //   element.classList.remove("active");
+    // });
+    targetObj.forEach((element) => {
+      let thisObj = element;
+      thisObj.addEventListener("click", (e) => {
+        e.preventDefault();
+        let currentTarget = e.currentTarget;
+        let currentTargetParent = currentTarget.closest("li");
+        let currentTargetParentNot = siblings(currentTargetParent);
+        currentTargetParentNot.forEach((element) => {
+          element.classList.remove("active");
+        });
+        currentTargetParent.classList.add("active");
+      }, false);
+      // this_targetObj_children.addEventListener("click",(e)=> {
+      //   e.preventDefault();
+      //   let thisObj = e.currentTarget;
+      //   let thisObjParent = thisObj.closest("li");
+      //   thisObjParent.classList.add("active");
+      // },false);
+    });
+  }
+}
+
+function nativeMonth(option) {
+  let native_formitem_wrap = document.querySelector(option.target);
+  let native_formitem = native_formitem_wrap.querySelector(".native_formitem");
+
+  // init
+  formatValue(native_formitem);
+
+  // event
+  native_formitem.addEventListener("change", (e) => {
+    let thisObj = e.currentTarget;
+    formatValue(thisObj);
+    if (option.callback !== undefined) {
+      option.callback();
+    }
+  }, false);
+
+  function formatValue(target) {
+    let targetObj = target;
+    let targetObjParent = targetObj.closest(".native_formitem_wrap");
+    let targetObjParentDomValue = targetObjParent.querySelector(".native_formitem_value");
+    let target_value = targetObj.value.split("-");
+    let target_parse = target_value[0] + "." + target_value[1];
+    targetObjParentDomValue.innerHTML = target_parse;
   }
 }

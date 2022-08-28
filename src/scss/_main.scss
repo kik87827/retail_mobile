@@ -9,7 +9,9 @@
 .mv_copy_eng{font-size:3.333vw;color:#001f44;font-family: 'Poppins';@include fontTransform;}
 .mv_copy_main{font-size:6.111vw;color:#001f44;margin-top:3.056vw;font-weight:600;}
 .mv_copy_sub{font-size:4.167vw;color:#00070f;line-height:1.6;margin-top:4.444vw;letter-spacing: -1px;@include fontTransform;}
-.mv_searchform{margin-top:11.111vw;display:flex;}
+.mv_searchform{margin-top:11.111vw;display:flex;
+    &.active input.mv_searchinput{border:1px solid #0c4a96;border-right:0;}
+}
 .mv_searchinput_wrap{flex:1;border:1px solid #0c4a96;border-right:0;}
 input.mv_searchinput{height:13.333vw;line-height:1;padding:0 4.444vw;box-sizing:border-box;width:100%;border:0;font-size:4.444vw;color:#000;
     &::-webkit-input-placeholder{font-size:3.333vw;@include fontTransform;}
