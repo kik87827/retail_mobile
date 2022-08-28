@@ -4059,12 +4059,13 @@ input.native_formitem::-webkit-inner-spin-button, input.native_formitem::-webkit
 }
 
 .sc_vtitle {
-  font-size: 1.1875rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #191919;
   position: relative;
   padding-left: 0.875rem;
   line-height: 1;
+  transform: skew(0.5deg);
 }
 .sc_vtitle:before {
   display: block;
@@ -4073,7 +4074,7 @@ input.native_formitem::-webkit-inner-spin-button, input.native_formitem::-webkit
   height: 0.5625rem;
   background: url("../images/bullet_square_m.png") no-repeat 0 0/100% auto;
   position: absolute;
-  top: 0.3125rem;
+  top: 0.21875rem;
   left: 0;
 }
 

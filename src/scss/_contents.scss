@@ -328,8 +328,8 @@ input.native_formitem{position:absolute;top:0;right:0;width:100%;border:0;z-inde
     &:last-of-type{margin-bottom:0;}
 }
 .sc_vtitle{
-    font-size:rem(19);font-weight:600;color:#191919;position:relative;padding-left:rem(14);line-height:1;
-    &:before{display:block;content:'';width:rem(9);height:rem(9);background:url("../images/bullet_square_m.png") no-repeat 0 0/100% auto;position:absolute;top:rem(5);left:0;}
+    font-size:rem(16);font-weight:600;color:#191919;position:relative;padding-left:rem(14);line-height:1;@include fontTransform;
+    &:before{display:block;content:'';width:rem(9);height:rem(9);background:url("../images/bullet_square_m.png") no-repeat 0 0/100% auto;position:absolute;top:rem(3.5);left:0;}
 }
 .sc_vcontent{margin-top:rem(8)}
 .emp_box{padding:rem(16);background:#f6f8f9;}
