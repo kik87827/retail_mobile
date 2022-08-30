@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   quickLayer();
   mainVisual();
   subSearchForm();
+  commonTab();
 });
 window.addEventListener("load",function(){
 });
@@ -295,6 +296,7 @@ DesignModal.prototype.bindEvent = function(option) {
 
 function DesignPopup(option) {
   this.selector = null;
+  this.option = option;
   if (option.selector !== undefined) {
     this.selector = document.querySelector(option.selector);
   }
@@ -326,6 +328,10 @@ DesignPopup.prototype.popupShow = function(target) {
   setTimeout(function() {
     objThis.selector.classList.add("motion");
   }, 30);
+
+  if(this.option.callback){
+    this.option.callback();
+  }
 
 
   this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
@@ -677,5 +683,35 @@ function nativeMonth(option){
     let target_value = targetObj.value.split("-");
     let target_parse = target_value[0] + "." + target_value[1]; 
     targetObjParentDomValue.innerHTML = target_parse;
+  }
+}
+
+
+function commonTab(){
+  addDynamicEventListener(document.body, 'click', '.d_tab_parent .d_tab', function (e) {
+      e.preventDefault();
+      tabFunc(e.target);
+  });
+
+  function tabFunc(target){
+    const targetTab = target;
+    const targetTabParent = targetTab.closest("li");
+    const targetTabSiblings = siblings(targetTabParent);
+    const targetTabCont = targetTab.getAttribute("href").split("#")[1];
+    const targetTabContDom = document.querySelectorAll(`[name="${targetTabCont}"]`);
+    
+    targetTabSiblings.forEach((element) => {
+      element.classList.remove("active");
+    });
+    targetTabParent.classList.add("active");
+
+    if(targetTabContDom.length){
+      targetTabContDom.forEach((elementDom) => {
+        siblings(elementDom).forEach((element) => {
+          element.classList.remove("active");
+        });
+        elementDom.classList.add("active");
+      })
+    }
   }
 }
