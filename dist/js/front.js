@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   mainVisual();
   subSearchForm();
   commonTab();
+  commonForm();
 });
 window.addEventListener("load", function() {});
 
@@ -202,6 +203,17 @@ function commonEvent() {
   }
 }
 
+function commonForm() {
+  addDynamicEventListener(document.body, 'change', '.form_select', function(e) {
+    let thisTarget = e.target;
+    if (thisTarget.value === "0") {
+      thisTarget.classList.add("ready");
+    } else {
+      console.log(thisTarget.value);
+      thisTarget.classList.remove("ready");
+    }
+  });
+}
 
 
 // 모달
@@ -449,16 +461,18 @@ function dropMenuCssAction() {
   if (dropmenuItem.length === 0) {
     return;
   }
-  dropmenuItem.forEach((element) => {
-    let thisObj = element;
-    let thisObjData = thisObj.getAttribute("data-dropmenu");
-    let targetObj = document.querySelector(`[name='${thisObjData}']`);
-    if (targetObj !== null) {
-      thisObj.style.top = (targetObj.getBoundingClientRect().top + window.scrollY + targetObj.getBoundingClientRect().height) + "px";
-      thisObj.style.left = (targetObj.getBoundingClientRect().left - 1) + "px";
-      thisObj.style.width = (targetObj.getBoundingClientRect().width + 2) + "px";
-    }
-  });
+  setTimeout(() => {
+    dropmenuItem.forEach((element) => {
+      let thisObj = element;
+      let thisObjData = thisObj.getAttribute("data-dropmenu");
+      let targetObj = document.querySelector(`[name='${thisObjData}']`);
+      if (targetObj !== null) {
+        thisObj.style.top = (targetObj.getBoundingClientRect().top + window.scrollY + targetObj.getBoundingClientRect().height) + "px";
+        thisObj.style.left = (targetObj.getBoundingClientRect().left - 1) + "px";
+        thisObj.style.width = (targetObj.getBoundingClientRect().width + 2) + "px";
+      }
+    });
+  }, 50);
 }
 
 function siblings(t) {

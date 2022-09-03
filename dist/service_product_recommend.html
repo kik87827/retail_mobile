@@ -219,6 +219,7 @@
 						});
 					}, false);
 				});
+				tabmenuActionFunc("#sort_tab_list > li");
 			</script>
 			<script>
 				rockMenu("#mbtab_02", "#mbmenu_02_05")
@@ -233,46 +234,299 @@
 				</div>
 				<div class="popup_contentlow">
 					<div class="pcont_inwrap">
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.<br>
-						내용이 들어갑니다.
+						<ul class="vertical_item_list">
+							<li>
+								<div class="emp_box">
+									<ul class="dot_emp_list type2">
+										<li>
+											본 서비스는 유통상품 표준DB 를 활용하여 상품바코드만으로 HS코드를 쉽게 조회할 수 있도록 구현하였으며, 우정사업본부의 도움을 받아 시범운영 중 입니다.
+											<p class="org_emp import_text font_12 mt5">상품구색 : 매장에서 진열-판매하는 상품 종류를 의미</p>
+											<ul class="dot_normal_list">
+												<li>상품정보 출처 : 대한상공회의소 유통상품 표준DB</li>
+												<li>POS 데이터 출처 : 국내 주요 대형마트, SSM</li>
+												<li>매출순위 : 카테고리 내 매출액 총합 기준 순위<p class="org_emp import_text font_12 mt5">[대] 30% [중] 40% [소] 30% 비율로 구색 추천</p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="cont_guide_box">
+									<table class="cont_guide_tb">
+										<thead>
+											<tr>
+												<th><span class="cont_guide_thtext">사이즈</span></th>
+												<th><span class="cont_guide_thtext">진열방법</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th><span class="cont_guide_tdlabel">대</span></th>
+												<td><span class="cont_guide_tdtext">진열대 하단에 진열</span></td>
+											</tr>
+											<tr>
+												<th><span class="cont_guide_tdlabel">중</span></th>
+												<td><span class="cont_guide_tdtext">진열대 중단(골든존)에 진열</span></td>
+											</tr>
+											<tr>
+												<th><span class="cont_guide_tdlabel">소</span></th>
+												<td><span class="cont_guide_tdtext">진열대 상단에 진열</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+							<li>
+								<div class="emp_box">
+									<ul class="dot_normal_list">
+										<li>구색추천 지수 : 단순 매출순위가 아닌, 소비자 니즈 만족을 위해 매장별로 반드시 진열-판매해야 하는 상품 여부를 수치로 제공</li>
+									</ul>
+								</div>
+								<div class="cont_guide_box">
+									<ul class="guide_icon_list">
+										<li>
+											<div class="guide_icon_img"><span class="star_group"><span class="star full"></span><span class="star full"></span><span class="star full"></span></span></div>
+											<div class="guide_icon_spec">필수적으로 취급해야 하는 상품</div>
+										</li>
+										<li>
+											<div class="guide_icon_img"><span class="star_group"><span class="star full"></span><span class="star full"></span><span class="star"></span></span></div>
+											<div class="guide_icon_spec">필수적이지 않지만 매장상황에 따라 취급해야 하는 상품</div>
+										</li>
+										<li>
+											<div class="guide_icon_img"><span class="star_group"><span class="star full"></span><span class="star"></span><span class="star"></span></span></div>
+											<div class="guide_icon_spec">특정 고객 취향에 맞추기 위해 취급해야 하는 상품</div>
+										</li>
+									</ul>
+									<table class="cont_guide_tb mt15">
+										<thead>
+											<tr>
+												<th><span class="cont_guide_thtext">구색추천 지수</span></th>
+												<th><span class="cont_guide_thtext">소형 중소매장</span></th>
+												<th><span class="cont_guide_thtext">중형 중소매장</span></th>
+												<th><span class="cont_guide_thtext">대형 중소매장</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="cont_guide_tdlabel">10</span></td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">9</span></td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">8</span></td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">7</span></td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star full"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">6</span></td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">5</span></td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">4</span></td>
+												<td>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star full"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">3</span></td>
+												<td>
+												</td>
+												<td>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">2</span></td>
+												<td>
+												</td>
+												<td>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="cont_guide_tdlabel">1</span></td>
+												<td>
+												</td>
+												<td>
+												</td>
+												<td>
+													<span class="star_group">
+														<span class="star full"></span>
+														<span class="star"></span>
+														<span class="star"></span>
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+						</ul>
+						<div class="author_obj_group">
+							<div class="author_obj_item">
+								<span class="author_obj_label">상세문의 :</span>
+								<div class="author_obj_cont">
+									<ul class="author_cont_list">
+										<li><span class="author_ico_item ico_company"><span class="author_ico_text">(주)마켓링크 유통데이터 연구소</span></span></li>
+										<li><span class="author_ico_item ico_mail"><span class="author_ico_text">sangwoo.kim@marketlink.co.kr</span></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
