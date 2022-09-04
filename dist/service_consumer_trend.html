@@ -156,10 +156,12 @@
 						<ul class="current_keyword_list">
 							<li><a href="javascript:;" class="current_keyword"><span class="current_keyword_text">이마트</span></a></li>
 							<li><a href="javascript:;" class="current_keyword"><span class="current_keyword_text">GS25</span></a></li>
+							<li><a href="javascript:;" class="current_keyword"><span class="current_keyword_text">가배두림</span></a></li>
+							<li><a href="javascript:;" class="current_keyword"><span class="current_keyword_text">나폴레옹제과점</span></a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="sc_vitem_wrap type2">
+				<div class="sc_vitem_wrap type2 mt40">
 					<div class="sc_vitem">
 						<h3 class="sc_vtitle">상세 옵션</h3>
 						<div class="sc_vcontent">
@@ -173,7 +175,7 @@
 											<!--  -->
 											<div class="option_initem_wrap flex_layout break">
 												<div class="option_initem">
-													<div class="sort_box_wrap radio_type">
+													<div class="sort_box_wrap radio_type full_wid">
 														<a href="javascript:;" class="sort_box active">1개월</a>
 														<a href="javascript:;" class="sort_box">3개월</a>
 														<a href="javascript:;" class="sort_box">6개월</a>
@@ -181,13 +183,19 @@
 													</div>
 												</div>
 												<div class="option_initem">
-													<div class="inline_flex">
+													<div class="while_full_item">
 														<div class="inline_item">
-															<input type="date" class="input_calender" value="2022.05.27">
+															<div class="input_date_item">
+																<span class="input_date_text">날짜 선택</span>
+																<input type="date" class="input_calender" value="2022.05.27">
+															</div>
 														</div>
-														<div class="inline_item"><span class="inline_else_text">~</span></div>
+														<span class="inline_else_text">~</span>
 														<div class="inline_item">
-															<input type="date" class="input_calender" value="2022.06.27">
+															<div class="input_date_item">
+																<span class="input_date_text">날짜 선택</span>
+																<input type="date" class="input_calender" value="2022.05.27">
+															</div>
 														</div>
 													</div>
 												</div>
@@ -241,7 +249,7 @@
 					</div>
 				</div>
 				<div class="btn_formsubmit_wrap align_center mt25">
-					<a href="javascript:;" class="btn_quadobj size_type2 mintype2">
+					<a href="javascript:;" class="btn_quadobj size_type2 mintype2" id="btn_searchsubmit">
 						<span class="quadobj_text">조회</span>
 					</a>
 				</div>
@@ -250,22 +258,32 @@
 				// 퍼블확인용
 				let url = window.location.href.split('?')[1];
 				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				let trend_current_popup = null;
+				let service_info_popup = null;
 				document.addEventListener("DOMContentLoaded", function() {
 					if (url_2 === "layer_show") {
-						let trend_current_popup = new DesignPopup({
+						trend_current_popup = new DesignPopup({
 							selector: "#trend_current_popup"
 						});
 					} else if (url_2 === "layer_show2") {
-						let service_info_popup = new DesignPopup({
+						service_info_popup = new DesignPopup({
 							selector: "#service_info_popup"
 						});
 					}
 					document.querySelector(".quick_obj.type2").addEventListener("click", () => {
-						let service_info_popup = new DesignPopup({
+						service_info_popup = new DesignPopup({
 							selector: "#service_info_popup"
 						});
 					}, false);
+					document.querySelector("#btn_searchsubmit").addEventListener("click", () => {
+						trend_current_popup = new DesignPopup({
+							selector: "#trend_current_popup"
+						});
+					}, false);
 				});
+
+				// 달력 호출
+				nativeDate();
 
 				// 개발 전달용
 				const search_field_input = document.querySelector("#search_input");

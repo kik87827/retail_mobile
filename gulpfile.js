@@ -2,6 +2,7 @@
 var gulp = require("gulp"),
 	fileinclude = require('gulp-file-include'),
 	webserver = require('gulp-webserver'),
+	connect = require('gulp-connect'),
 	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
 	scss = require('gulp-sass')(require('sass')),
@@ -9,7 +10,7 @@ var gulp = require("gulp"),
 	beautify = require('gulp-beautify'),
 	htmlbeautify = require('gulp-html-beautify');
 
-gulp.task('default', ['scss','fileinclude','beautify', 'watch','webserver']);
+gulp.task('default', ['scss','fileinclude','beautify', 'watch','connect']);
 
 gulp.task('scss', function () {
 	gulp.src('./src/scss/*.scss')
@@ -26,6 +27,14 @@ gulp.task('htmlbeautify', function () {
 	.pipe(htmlbeautify(options))
 	.pipe(gulp.dest('./dist/'))
 });
+
+gulp.task('connect', function() {
+	connect.server({
+	  root: 'dist',
+	  port: 8001,
+	  livereload: true
+	});
+  });
 
 gulp.task('jshint',function(){
 	gulp.src('./src/js/front.js')

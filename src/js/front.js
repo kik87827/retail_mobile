@@ -700,6 +700,35 @@ function nativeMonth(option){
   }
 }
 
+function nativeDate(option){
+  let native_formitem = document.querySelectorAll(".input_calender");
+  
+  // init
+  native_formitem.forEach((element) => {
+    // formatValue(element);
+    element.addEventListener("change",(e)=>{
+      let thisObj = e.currentTarget;
+      formatValue(thisObj);
+      if (option.callback !== undefined) {
+        option.callback();
+      }
+    },false);
+    element.addEventListener("click",(e)=>{
+      
+    },false);
+  });
+
+  // event
+
+  function formatValue(target){
+    let targetObj = target;
+    let targetObjParent = targetObj.closest(".input_date_item");
+    let targetObjParentDomValue = targetObjParent.querySelector(".input_date_text");
+    let target_value = targetObj.value;
+    targetObjParentDomValue.innerHTML = target_value;
+  }
+}
+
 
 function commonTab(){
   addDynamicEventListener(document.body, 'click', '.d_tab_parent .d_tab', function (e) {
