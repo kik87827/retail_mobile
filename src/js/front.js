@@ -96,20 +96,19 @@ function commonLayout(){
       },false);
     });
 
-    hasToggle_menu.forEach((element)=>{
+    hasToggle_menu.forEach((element,index)=>{
       element.addEventListener("click",(e)=>{
           e.preventDefault();
           let thisObj = e.currentTarget;
           let thisObjParent = thisObj.closest("li");
           // let thisObjParentSiblings = siblings(thisObjParent);
           let thisObjMenuList = thisObj.nextElementSibling;
-
           // thisObjParentSiblings.forEach((element)=>{
           //   element.classList.remove("active");
           // });
-          mbmenu_li.forEach((element)=>{
-            element.classList.remove("active");
-          });
+          // mbmenu_li.forEach((element,index)=>{
+          //   element.classList.remove("active");
+          // });
 
           thisObjParent.classList.toggle("active");
           thisObjMenuList.classList.toggle("active");

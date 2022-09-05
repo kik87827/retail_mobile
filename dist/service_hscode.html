@@ -108,19 +108,19 @@
 				</div>
 				<div class="codeform_container">
 					<ul class="codeform_list">
-						<li><input type="text" class="codeform_input" value="8"></li>
-						<li><input type="text" class="codeform_input" value="7"></li>
-						<li><input type="text" class="codeform_input" value="9"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
-						<li><input type="text" class="codeform_input"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
+						<li><input type="number" class="codeform_input" maxlength="1"></li>
 						<li class="else"><a href="#" class="btn_codeform_submit">HS코드 조회</a></li>
 					</ul>
 					<p class="import_text mt10 org_emp font_14">12자리의 바코드는 맨 앞칸을 0으로 입력해주세요.</p>
@@ -162,6 +162,39 @@
 							selector: "#service_info_popup"
 						});
 					}, false);
+				});
+
+
+				// input 
+				let codeform_input = document.querySelectorAll(".codeform_input");
+				codeform_input.forEach((element) => {
+					element.addEventListener("keyup", (e) => {
+						let etarget = e.currentTarget;
+						let etargetParent = etarget.closest("li");
+						let etargetLength = etarget.value.length;
+						let etargetNext = etargetParent.nextElementSibling;
+						let etargetNextInput = etargetNext.querySelector("input.codeform_input");
+						let etargetPrev = etargetParent.previousElementSibling;
+						let etargetPrevInput = etargetPrev !== null ? etargetPrev.querySelector("input.codeform_input") : null;
+						if (etarget.value.length > etarget.maxLength) {
+							etarget.value = etarget.value.slice(0, etarget.maxLength);
+						}
+
+						console.log(etargetPrev);
+
+						if (etargetPrevInput !== null) {
+							if (etargetLength == 0) {
+								etargetPrevInput.focus();
+							}
+						}
+
+						if (etargetNextInput !== null) {
+							if (etargetLength > 0) {
+								etargetNextInput.focus();
+							}
+						}
+
+					}, false)
 				});
 			</script>
 			<script>
