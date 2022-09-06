@@ -6666,11 +6666,11 @@ input.mv_searchinput::input-placeholder {
   background: url("../images/dash_line.png") repeat-x 0 0/auto 0.125rem;
   height: 0.125rem;
 }
-.mc_data_tr:hover, .mc_data_tr.active {
+.mc_data_tr.active {
   background: #fff;
   z-index: 3;
 }
-.mc_data_tr:hover:before, .mc_data_tr.active:before {
+.mc_data_tr.active:before {
   display: block;
   content: "";
   width: 100%;
@@ -6680,7 +6680,7 @@ input.mv_searchinput::input-placeholder {
   top: -3px;
   left: 0;
 }
-.mc_data_tr:hover:after, .mc_data_tr.active:after {
+.mc_data_tr.active:after {
   background: none;
   display: block !important;
   border: 1px solid #0c4a96;
@@ -6691,17 +6691,17 @@ input.mv_searchinput::input-placeholder {
   top: 0;
   left: 0;
 }
-.mc_data_tr:hover .mc_data_rank, .mc_data_tr.active .mc_data_rank {
+.mc_data_tr.active .mc_data_rank {
   color: #0c4a96;
   font-size: 1.125rem;
   font-weight: 800;
 }
-.mc_data_tr:hover .mc_data_text, .mc_data_tr.active .mc_data_text {
+.mc_data_tr.active .mc_data_text {
   color: #0c4a96;
   font-size: 0.9375rem;
   font-weight: 600;
 }
-.mc_data_tr:hover .mc_data_text.type2, .mc_data_tr.active .mc_data_text.type2 {
+.mc_data_tr.active .mc_data_text.type2 {
   font-size: 0.9375rem;
 }
 .mc_data_tr.active {
