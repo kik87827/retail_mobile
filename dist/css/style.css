@@ -4794,6 +4794,9 @@ input.codeform_input {
   -moz-appearance: none;
   -ms-appearance: none;
 }
+input.codeform_input:focus {
+  border: 2px solid #f16333;
+}
 
 input[type=number].codeform_input {
   -moz-appearance: textfield;

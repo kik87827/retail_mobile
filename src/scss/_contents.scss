@@ -571,7 +571,9 @@ input.native_formitem{position:absolute;top:0;right:0;width:100%;border:0;z-inde
         &.else{flex:1;}
      }
 }
-input.codeform_input{border:1px solid #bfbfbf;border-radius:rem(3);color:#191919;font-size:rem(22);text-align: center;height:rem(40);box-sizing: border-box;font-weight:600;width:100%;padding:0;-webkit-appearance: none; appearance: none; -moz-appearance: none; -ms-appearance:none;}
+input.codeform_input{border:1px solid #bfbfbf;border-radius:rem(3);color:#191919;font-size:rem(22);text-align: center;height:rem(40);box-sizing: border-box;font-weight:600;width:100%;padding:0;-webkit-appearance: none; appearance: none; -moz-appearance: none; -ms-appearance:none;
+    &:focus{border:2px solid #f16333;}
+}
 input[type='number'].codeform_input{
     -moz-appearance: textfield;
 }
