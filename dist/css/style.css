@@ -6379,14 +6379,11 @@ input.sc_search_input::input-placeholder {
   display: flex;
 }
 .mv_searchform.active input.mv_searchinput {
-  border: 1px solid #0c4a96;
-  border-right: 0;
+  border-width: 0.125rem;
 }
 
 .mv_searchinput_wrap {
   flex: 1;
-  border: 1px solid #0c4a96;
-  border-right: 0;
 }
 
 input.mv_searchinput {
@@ -6395,7 +6392,7 @@ input.mv_searchinput {
   padding: 0 4.444vw;
   box-sizing: border-box;
   width: 100%;
-  border: 0;
+  border: 1px solid #0c4a96;
   font-size: 4.444vw;
   color: #000;
 }
