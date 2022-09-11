@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('./include/head.html')
+</head>
+<body class="front_body">
+	<div class="page_wrap">
+		@@include('./include/header.html')
+		<section class="middle_wrap">
+			<div class="sub_title_row">
+				<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
+				<h2 class="sub_title">유통데이터 거래 플랫폼</h2>
+			</div>
+			<div class="sub_content_row">
+				<ul class="sc_boxtab_list has_half_wid" id="user_tab_list">
+					<li class="active"><a href="#tabtarget_01" class="sc_boxtab d_tab">사업자</a></li>
+					<li><a href="#tabtarget_02" class="sc_boxtab d_tab">개인</a></li>
+				</ul>
+				<fieldset class="sc_search_form mt25">
+					<div class="sc_search_input_w"><input type="text" class="sc_search_input" placeholder="찾고 싶은 상품의 바코드를 입력해 주세요."></div>
+					<a href="#" class="btn_sc_search_submit">검색</a>
+				</fieldset>
+				<div class="scroll_boxtab_list_wrap">
+					<ul class="sc_boxtab_list type2" id="sort_tab_list">
+						<li class="active"><a href="#" class="sc_boxtab">전체</a></li>
+						<li><a href="#" class="sc_boxtab">삽니다</a></li>
+						<li><a href="#" class="sc_boxtab">팝니다</a></li>
+						<li><a href="#" class="sc_boxtab">거래완료</a></li>
+					</ul>
+				</div>
+				<div class="data_vertical_list_wrap">
+					<ul class="data_vertical_list">
+						<li>
+							<a href="#" class="data_veritcal_item">
+								<div class="data_veritcal_main"><span class="data_kind">[삽니다]</span>코로나19 관련 유통상품 목록 공유공유</div>
+								<div class="data_veritcal_sub">2021-03-04 17:30</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="data_veritcal_item">
+								<div class="data_veritcal_main"><span class="data_kind">[삽니다]</span>코로나19 관련 유통상품 목록 공유공유 글자테스트 글자테스트 글자테스트 글자테스트 글자테스트 글자테스트</div>
+								<div class="data_veritcal_sub">2021-03-04 17:30</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="data_veritcal_item">
+								<div class="data_veritcal_main"><span class="data_kind">[팝니다]</span>글자테스트</div>
+								<div class="data_veritcal_sub">2021-03-04 17:30</div>
+							</a>
+						</li>
+						<li class="nodata_li">
+							<p class="nodata_item has_ico"><span class="nodata_item_text">유통데이터 거래 플랫 내역이 없습니다.</span></p>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_textbox_wrap"><a href="#" class="btn_textbox ico_more"><span class="btn_textbox_in">더보기 (1/100)</span></a></div>
+			</div>
+			<script>
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				let detail_popup = null;
+				document.addEventListener("DOMContentLoaded", function() {
+					if(url_2 === "layer_show"){
+						detail_popup = new DesignPopup({
+							selector: "#service_info_popup"
+						});
+					}
+					document.querySelector(".quick_obj.type2").addEventListener("click",()=>{
+						let service_info_popup = new DesignPopup({
+							selector: "#service_info_popup"
+						});
+					},false);
+				});
+				tabmenuActionFunc("#user_tab_list > li , #sort_tab_list > li");
+			</script>
+			<script>rockMenu("#mbtab_02", "#mbmenu_02_07")</script>
+		</section>	
+		<!-- popup -->
+		<div class="popup_wrap" id="service_info_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">서비스 개요</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+		@@include('./include/sub_quick.html')
+		@@include('./include/footer.html')
+	</div>
+</body>
+</html>

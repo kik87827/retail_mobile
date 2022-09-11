@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./js/jquery-1.8.3.min.js"></script>
+	<script src="./js/dynamicListener.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/MonthPicker.js"></script>
+	<script src="./js/front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<header class="header_wrap">
+			<h1 class="toplogo">
+				<a href="#" class="toplogo_link">
+					<div class="toplogo_main">유통데이터 서비스 플랫폼</div>
+					<div class="toplogo_sub">Retail Data Service Platform</div>
+				</a>
+			</h1>
+			<div class="header_util_wrap">
+				<a href="#" class="btn_util ico_login"><span class="hdtext">로그인</span></a>
+				<a href="#" class="btn_util ico_menu"><span class="hdtext">메뉴열기</span></a>
+			</div>
+			<!-- mobile_menu -->
+			<div class="mobile_mainmenu_zone">
+				<div class="mobile_mainmenu_wrap">
+					<div class="mbutil_row">
+						<div class="toplogo">
+							<a href="#" class="toplogo_link">
+								<div class="toplogo_main">유통데이터 서비스 플랫폼</div>
+								<div class="toplogo_sub">Retail Data Service Platform</div>
+							</a>
+						</div>
+					</div>
+					<div class="mbmenu_row">
+						<div class="mbmenu_tab_cols">
+							<ul class="mbmenu_tab_list">
+								<li id="mbtab_01"><a href="#mbmenu_cont01" class="mbmenu_tab">사업소개</a></li>
+								<li id="mbtab_02"><a href="#mbmenu_cont02" class="mbmenu_tab">유통데이터<br>서비스</a></li>
+								<li id="mbtab_03"><a href="#mbmenu_cont03" class="mbmenu_tab">데이터 활용</a></li>
+								<li id="mbtab_04"><a href="#mbmenu_cont04" class="mbmenu_tab">소식</a></li>
+							</ul>
+							<ul class="mbelse_menu_list">
+								<li><a href="#" class="mbelse_menu">로그인</a></li>
+							</ul>
+						</div>
+						<div class="mbmenu_list_cols">
+							<div class="mbmenu_list_wrap" id="mbmenu_cont01">
+								<ul class="mbmenu_list">
+									<li id="mbmenu_01_01"><a href="#" class="mbmenu_one">유통데이터 소개</a></li>
+								</ul>
+							</div>
+							<div class="mbmenu_list_wrap" id="mbmenu_cont02">
+								<ul class="mbmenu_list">
+									<li id="mbmenu_02_01"><a href="#" class="mbmenu_one">상품 정보 조회</a></li>
+									<li id="mbmenu_02_02" class="has_two">
+										<a href="#" class="mbmenu_one">인기상품 트렌드</a>
+										<ul class="mbmenu_two_list">
+											<li id="mbmenu_02_02_01"><a href="#" class="mbmenu_two">오프라인 인기상품 리스트</a></li>
+											<li id="mbmenu_02_02_02"><a href="#" class="mbmenu_two">온라인 인기상품 리스트</a></li>
+										</ul>
+									</li>
+									<li id="mbmenu_02_03"><a href="#" class="mbmenu_one">소비자 구매 트렌드</a></li>
+									<li id="mbmenu_02_04"><a href="#" class="mbmenu_one">자연어/약어/감성정보</a></li>
+									<li id="mbmenu_02_05"><a href="#" class="mbmenu_one">상품 구색추천</a></li>
+									<li id="mbmenu_02_06"><a href="#" class="mbmenu_one">중소매장 매출 분석정보</a></li>
+									<li id="mbmenu_02_07"><a href="#" class="mbmenu_one">유통데이터 거래 플랫폼</a></li>
+									<li id="mbmenu_02_08"><a href="#" class="mbmenu_one">유통데이터 법률지원 서비스</a></li>
+									<li id="mbmenu_02_09"><a href="#" class="mbmenu_one">교육/행사</a></li>
+									<li id="mbmenu_02_10"><a href="#" class="mbmenu_one">HS-Code조회</a></li>
+								</ul>
+							</div>
+							<div class="mbmenu_list_wrap" id="mbmenu_cont03">
+								<ul class="mbmenu_list">
+									<li id="mbmenu_03_01"><a href="#" class="mbmenu_one">데이터 활용 요청</a></li>
+								</ul>
+							</div>
+							<div class="mbmenu_list_wrap" id="mbmenu_cont04">
+								<ul class="mbmenu_list">
+									<li id="mbmenu_04_01"><a href="#" class="mbmenu_one">공지사항/자료실</a></li>
+									<li id="mbmenu_04_02"><a href="#" class="mbmenu_one">유통시장동향 레포트</a></li>
+									<li id="mbmenu_04_03"><a href="#" class="mbmenu_one">FAQ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="btn_mbmenuclose"><span class="hdtext">메인메뉴 닫기</span></a>
+				</div>
+			</div>
+			<!-- // mobile_menu -->
+		</header>
+		<section class="middle_wrap">
+			<div class="sub_title_row">
+				<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
+				<h2 class="sub_title">유통데이터 거래 플랫폼</h2>
+			</div>
+			<div class="sub_content_row">
+
+				<div class="viewskin_wrap">
+					<h3 class="viewskin_title"><span class="data_kind">[팝니다]</span>코로나19관련 유통 상품 데이터</h3>
+					<div class="viewskin_else_wrap">
+						<p class="viewskin_else ico_calendar"> 2021. 09. 09</p>
+					</div>
+					<div class="viewskin_content">
+						대한상공회의소 유통물류진흥원에서 운영하는 바코
+						드 기반의 상품DB 인 "유통상품 지식뱅크" 에 등록된
+						코로나19와 직접적인 관련있는 상품들 목록을 공유
+						합니다.<br><br>
+
+						1) 손씻기 관련 제품 (손제정제/핸드워시, 소독용 물
+						비누 등, 총 103개)<br>
+						2) 보건용 마스크 제품 (KF 인증 80, 94 마스크 제품,
+						총 114개)<br><br>
+
+						* 2018년 7월 ~ 2020년 3월까지 등록된 상품데이
+						터 대상
+					</div>
+				</div>
+
+				<div class="icon_detail_list_wrap">
+					<ul class="icon_detail_list">
+						<li>
+							<div class="icon_detail_cell define_th"><span class="icon_detail_label ico_01"><span class="icon_detail_label_text">회사명</span></span></div>
+							<div class="icon_detail_cell define_td">
+								<p class="icon_detail_data">대한상공회의소</p>
+							</div>
+						</li>
+						<li>
+							<div class="icon_detail_cell define_th"><span class="icon_detail_label ico_02"><span class="icon_detail_label_text">회사 전화번호</span></span></div>
+							<div class="icon_detail_cell define_td">
+								<p class="icon_detail_data">02-6050-1482</p>
+							</div>
+						</li>
+						<li>
+							<div class="icon_detail_cell define_th"><span class="icon_detail_label ico_03"><span class="icon_detail_label_text">회사 이메일</span></span></div>
+							<div class="icon_detail_cell define_td">
+								<p class="icon_detail_data">notnull@korcham.net</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="formview_tb_w type2">
+					<div class="formview_tb">
+						<div class="formview_tr">
+							<div class="formview_cell formview_th"><span class="formview_label">첨부파일</span></div>
+							<div class="formview_cell formview_td">
+								<ul class="file_list">
+									<li><a href="#" class="file_item"><span class="file_item_text">대한상공회의소(GS1KR)_손씻기관련제품.xlsx</span></a></li>
+									<li><a href="#" class="file_item"><span class="file_item_text">대한상공회의소(GS1KR)_보건용마스크.xlsx</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_group align_type2">
+					<a href="#" class="btn_box">수정</a>
+					<a href="#" class="btn_box">목록</a>
+				</div>
+			</div>
+			<script>
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				let detail_popup = null;
+				document.addEventListener("DOMContentLoaded", function() {
+					if (url_2 === "layer_show") {
+						detail_popup = new DesignPopup({
+							selector: "#service_info_popup"
+						});
+					} else if (url_2 === "layer_password") {
+						password_popup = new DesignPopup({
+							selector: "#password_popup"
+						});
+					} else if (url_2 === "layer_password2") {
+						password_popup = new DesignPopup({
+							selector: "#password_popup2"
+						});
+					}
+					document.querySelector(".quick_obj.type2").addEventListener("click", () => {
+						let service_info_popup = new DesignPopup({
+							selector: "#service_info_popup"
+						});
+					}, false);
+				});
+			</script>
+			<script>
+				rockMenu("#mbtab_02", "#mbmenu_02_07")
+			</script>
+		</section>
+		<!-- popup -->
+		<div class="popup_wrap" id="service_info_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">서비스 개요</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="password_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">비밀번호 확인</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap type2">
+						<div class="form_input_group">
+							<div class="form_input_row">
+								<input type="password" class="form_input" placeholder="비밀번호를 입력해 주세요.">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup_btnlow type2">
+					<div class="btn_submitbox_w type2">
+						<a href="javascript:;" class="btn_submitbox close_trigger">취소</a><!-- close_trigger 있으면 닫기 -->
+						<a href="javascript:;" class="btn_submitbox dtype3 close_trigger">확인</a> <!-- close_trigger 있으면 닫기 -->
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="password_popup2">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">비밀번호 확인</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap type2">
+						<div class="form_input_group">
+							<div class="form_input_row">
+								<input type="password" class="form_input" placeholder="비밀번호를 입력해 주세요.">
+								<div class="form_para_wrap">
+									<p class="warn_para">비밀번호가 일치하지 않습니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup_btnlow type2">
+					<div class="btn_submitbox_w type2">
+						<a href="javascript:;" class="btn_submitbox close_trigger">취소</a><!-- close_trigger 있으면 닫기 -->
+						<a href="javascript:;" class="btn_submitbox dtype3 close_trigger">확인</a> <!-- close_trigger 있으면 닫기 -->
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+		<!-- quick_layer -->
+		<div class="quick_layer_wrap">
+			<a href="javascript:;" class="quick_obj type2"><span class="quick_text">?</span></a>
+		</div>
+		<!-- // quick_layer -->
+		<footer class="footer_wrap">
+			<div class="footer_menu_row">
+				<div class="footer_menu_long">
+					<div class="dropmenu_item">
+						<a href="javascript:;" class="dropmenu_call" name="family_drop">Family Site</a>
+						<div class="dropmenu_option_list_wrap">
+							<ul class="dropmenu_option_list">
+								<li><a href="javascript:;" class="dropmenu_option" target="_blank">산업통상지원부</a></li>
+								<li><a href="javascript:;" class="dropmenu_option" target="_blank">대한상공회의소</a></li>
+								<li><a href="javascript:;" class="dropmenu_option" target="_blank">유통물류진흥원</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer_menu_short">
+					<ul class="footer_menu_list">
+						<li><a href="javascript:;" class="footer_menu" id="popup_call_person">개인정보 처리 방침</a></li>
+						<li><a href="#" class="footer_menu">PC버전</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_logo_row">
+				<ul class="partner_logo_list">
+					<li><a href="#" class="partner_logo" target="_blank"><img src="./images/logo_industry_m.png" alt="산업통상자원부"></a></li>
+					<li><a href="#" class="partner_logo" target="_blank"><img src="./images/logo_korea_m.png" alt="대한상공회의소"></a></li>
+				</ul>
+			</div>
+			<div class="footer_copy_row">
+				<address class="footer_copy">서울시 중구 세종대로 39 상공회의소회관 17층 대한상공회의소 유통물류진흥원(GS1 KOREA) KCCI B/D, 39, SEJONGDAERO,</address>
+				<p class="footer_copy">JUNG-GU, SEOUL, KOREA. COPYRIGHT(C) 2021 KCCI. GS1 KOREA. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="footer_partner_row">
+				<p class="footer_partner_title">[콘텐츠 | 사업제휴 문의]</p>
+				<ul class="footer_partner_list">
+					<li>
+						<p class="footer_partner_label">대표전화</p>
+						<div class="footer_partner_content"><a href="tel:02-6050-1482" class="footer_sublink">02-6050-1482</a></div>
+					</li>
+					<li>
+						<p class="footer_partner_label">E-MAIL</p>
+						<div class="footer_partner_content"><a href="mailto:notnull@korcham.net" class="footer_sublink">notnull@korcham.net</a></div>
+					</li>
+				</ul>
+			</div>
+			<p class="footer_end_copy">유통데이터 서비스 플랫폼의 모든 콘텐츠는 저작권법의 보호를 받은바, 무단 전재, 복사, 배포 등을 금합니다.</p>
+		</footer>
+		<!-- 개인정보처리방침 -->
+		<div class="popup_wrap" id="person_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item fulltype">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">개인정보처리방침</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap has_terms">
+						<!--  -->
+						<p class="terms_para intro_para">대한상공회의소(이하 “상의”이라 함)가 취급하는 모든 개인정보는 관련법령에 근거하거나 정보주체의 동의에 의하여 수집·보유 및 처리되고 있습니다.
+							또한 정보주체의 개인정보 보호 및 권익을 보장하고 이와 관련한 고충을 신속하고 원활하게 처리하기 위하여 다음과 같은 처리방침을 두고 있습니다.
+						</p>
+						<div class="terms_main">
+							<h4>제1조(개인정보의 처리목적)</h4>
+							<p class="terms_para">상의는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용하지 않으며, 이용 목적이 변경되는 경우에는 정보주체의 동의를 받아 처리하겠습니다.</p>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											로그인
+											<ul class="dash_text_list">
+												<li>
+													유통데이터 서비스 플랫폼
+													<ul class="dot_text_list">
+														<li>네이버 가입 정보를 통한 인증 절차를 통해 제공받는 개인정보(비식별화된 Key값)</li>
+														<li>카카오 가입 정보를 통한 인증 절차를 통해 제공받는 개인정보(비식별화된 Key값)</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">②</span>
+										<div class="indent_cont">
+											서비스 제공
+											<ul class="dot_text_list">
+												<li>
+													샘플데이터 다운로드 서비스
+													<ul class="dash_text_list">
+														<li>상품데이터 다운로드 서비스</li>
+														<li>구매데이터 다운로드 서비스</li>
+														<li>표준DB 분류체계 다운로드 서비스</li>
+														<li>표준DB 속성정의서 다운로드 서비스</li>
+													</ul>
+												</li>
+												<li>인기상품차트 다운로드 서비스</li>
+												<li>온라인유통상품정보 다운로드 서비스</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<h4>제2조(개인정보의 처리 및 보유기간)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											상의는 법령에 근거하거나 정보주체로부터 동의 받은 범위 내에서 개인정보를 처리·보유합니다.
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">②</span>
+										<div class="indent_cont">
+											각각의 개인정보 처리 및 보유기간은 다음과 같습니다.
+										</div>
+									</div>
+									<div class="scroll_table_wrap">
+										<table>
+											<tbody>
+												<tr>
+													<th>순번</th>
+													<th>개인정보 명칭</th>
+													<th>운영근거</th>
+													<th>처리목적</th>
+													<th>보유기간</th>
+												</tr>
+												<tr>
+													<td class="no">1</td>
+													<td>서비스 사용자정보</td>
+													<td>정보주체의 동의</td>
+													<td>서비스 자료 제공 및 사용량 통계 확인을 위한 개인정보</td>
+													<td>서비스 폐지 시까지</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">③</span>
+										<div class="indent_cont">
+											상의는 아래와 같은 경우에 한해 회원정보를 목적 외로 이용 및 제공할 수 있습니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">1.</span>
+														<div class="indent_cont">
+															개인정보의 이용목적: 상의에서 제공하는 소식안내, 행사(세미나), 교육, 뉴스레터 등
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">2.</span>
+														<div class="indent_cont">
+															이용하는 개인정보 항목 : 이메일 주소
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">3.</span>
+														<div class="indent_cont">
+															개인정보의 보유 및 이용기간 : 동의 서비스 폐지 시까지
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">4.</span>
+														<div class="indent_cont">
+															정보주체는 상의에서 목적 외 이용하는 개인정보에 대해 동의를 거부할 권리가 있으며, 동의 거부시에는 위 목적으로 이용되지 않습니다.
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4>제3조(개인정보의 제3자 제공)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											상의는 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 다음의 경우를 제외하고는 정보주체의 사전 동의 없이는 본래의 범위를 초과하여 처리하거나 제3자에게 제공하지 않습니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">1.</span>
+														<div class="indent_cont">정보주체로부터 별도의 동의를 받는 경우</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">2.</span>
+														<div class="indent_cont">법률에 특별한 규정이 있는 경우</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">3.</span>
+														<div class="indent_cont">정보주체 또는 법정대리인의 의사표시를 할 수 없는 상태에 있거나 주소불명 등으로 사전동의를 받을 수 없는 경우로서 명백히 정보주체 또는 제3자의 급박한 생명, 신체, 재산의 이익을 위하여 필요하다고 인정되는 경우</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">4.</span>
+														<div class="indent_cont">
+															통계작성 및 학술연구 등의 목적을 위하여 필요한 경우로서 특정 개인을 알아 볼 수 없는 형태로 개인정보를 제공하는 경우
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">5.</span>
+														<div class="indent_cont">
+															개인정보를 목적 외의 용도로 이용하거나 이를 제3자에게 제공하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 경우
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">6.</span>
+														<div class="indent_cont">
+															조약, 그 밖의 국제협정의 이행을 위하여 외국정보 또는 국제기구에 제공하기 위하여 필요한 경우
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">7.</span>
+														<div class="indent_cont">
+															범죄의 수사와 공소의 제기 및 유지를 위하여 필요한 경우
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">8.</span>
+														<div class="indent_cont">
+															법원의 재판업무 수행을 위하여 필요한 경우
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">9.</span>
+														<div class="indent_cont">
+															형 및 감호, 보호처분의 집행을 위하여 필요한 경우
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<h4>제4조(개인정보처리의 위탁)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											상의는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.
+										</div>
+									</div>
+									<div class="scroll_table_wrap">
+										<table>
+											<tbody>
+												<tr>
+													<th>순번</th>
+													<th>위탁받는자</th>
+													<th>위탁업무의 내용</th>
+													<th>위탁기간</th>
+												</tr>
+												<tr>
+													<td class="no">1</td>
+													<td>㈜엠큐닉</td>
+													<td>서비스 제공을 위한 시스템 개발 및 운영</td>
+													<td>2021년 12월 20일 ~ 2022년 12월 31일</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">②</span>
+										<div class="indent_cont">
+											상의는 개인정보 처리업무를 위탁하는 경우 개인정보보호법 제26조(업무위탁에 따른 개인정보의 처리 제한)에 따라 다음의 내용이 포함된 문서에 의하여 처리하고 있습니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">1.</span>
+														<div class="indent_cont">위탁업무 수행 목적 외 개인정보의 처리금지에 관한 사항</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">2.</span>
+														<div class="indent_cont">개인정보의 기술적·관리적 보호조치에 관한 사항</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">3.</span>
+														<div class="indent_cont">
+															그 밖에 개인정보의 안전한 관리를 위하여 다음과 같이 대통령령으로 정한 사항
+															<ul class="dot_text_list">
+																<li>위탁업무의 목적 및 범위</li>
+																<li>재위탁 제한에 관한 사항</li>
+																<li>개인정보에 대한 접근제한 등 안전성 확보조치에 관한 사항</li>
+																<li>위탁업무와 관련하여 보유하고 있는 개인정보의 관리현황 점검 등 감독에 관한 사항</li>
+																<li>법 제26조제2항에 따른 수탁자가 준수하여야 할 의무를 위반한 경우의 손해배상 등 책임에 관한 사항</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">③</span>
+										<div class="indent_cont">위탁업무의 내용이나 수탁자가 변경될 경우에는 지체 없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.</div>
+									</div>
+								</li>
+							</ul>
+
+
+							<h4>제5조(정보주체의 권리·의무 및 행사방법)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											정보주체는 상의에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">1.</span>
+														<div class="indent_cont">개인정보 열람요구</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">2.</span>
+														<div class="indent_cont">오류 등이 있을 경우 정정 요구</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">3.</span>
+														<div class="indent_cont">삭제요구</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">4.</span>
+														<div class="indent_cont">처리정지 요구</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">②</span>
+										<div class="indent_cont">
+											제1항에 따른 권리 행사는 개인정보보호법 시행규칙 제8호 서식에 따라 작성 후 서면, 전화, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 상의는 이에 대해 지체 없이 조치하겠습니다.
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">③</span>
+										<div class="indent_cont">정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 상의는 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">④</span>
+										<div class="indent_cont">제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙
+											별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">⑤</span>
+										<div class="indent_cont">개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제5항, 제37조 제2항에 의하여 정보주체의 권리가 제한될 수 있습니다.</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">⑥</span>
+										<div class="indent_cont">개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">⑦</span>
+										<div class="indent_cont">
+											정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.
+											<ul class="dot_text_list">
+												<li>[시행규칙 별지 제8호] 개인정보(열람, 정정·삭제, 처리정지) 요구서</li>
+												<li>[시행규칙 별지 제11호] 위임장</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<h4>제6조(처리하는 개인정보 항목)</h4>
+							<p class="terms_para">상의는 다음의 개인정보 항목을 처리하고 있습니다.</p>
+							<div class="scroll_table_wrap">
+								<table>
+									<tbody>
+										<tr>
+											<th>순번</th>
+											<th>개인정보파일의 명칭</th>
+											<th>개인정보 항목</th>
+										</tr>
+										<tr>
+											<td class="no">1</td>
+											<td>서비스 사용자 정보</td>
+											<td>소속회사, 이름</td>
+										</tr>
+										<tr>
+											<td class="no">2</td>
+											<td>서비스 활용 신청서</td>
+											<td>회사명, 대표자, 주소, 담당자, 부서, 직위, 전화, 이메일</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<h4>제7조(개인정보의 파기)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">상의는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다. 다만, 다른
+											법률에 따라 보존하여야 하는 경우에는 그러하지 않습니다.</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">②</span>
+										<div class="indent_cont">
+											개인정보 파기의 절차 및 방법은 다음과 같습니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">1.</span>
+														<div class="indent_cont">
+															파기절차<br>불필요한 개인정보 및 개인정보파일은 개인정보책임자의 책임 하에 내부방침 절차에 따라 다음과 같이 처리하고 있습니다.
+															<ul class="dash_text_list">
+																<li>
+																	개인정보의 파기<br>
+																	보유기간이 경과한 개인정보는 종료일로부터 지체 없이 파기합니다.
+																</li>
+																<li>
+																	개인정보파일의 파기<br>
+																	개인정보파일의 처리 목적 달성, 해당 서비스의 폐지, 사업의 종료 등 그 개인정보파일이 불필요하게 되었을 때에는 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 지체 없이 그 개인정보파일을 파기합니다.
+																</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">2.</span>
+														<div class="indent_cont">
+															파기방법<br>
+															상의는 전자적 파일 형태로 기록·저장된 개인정보는 기록을 재생할 수 없도록 파기하며, 종이 문서에 기록·`저장된 개인정보는 분쇄기로 분쇄하거나 소각하여 파기합니다.
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<h4>제8조(개인정보의 안전성 확보조치)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											상의는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">1.</span>
+														<div class="indent_cont">
+															내부관리계획 수립 및 시행
+															<ul class="dash_text_list">
+																<li>상의는 ‘개인정보의 안전성 확보조치 기준'에 의거하여 내부관리계획을 수립 및 시행합니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">2.</span>
+														<div class="indent_cont">
+															접근권한의 관리
+															<ul class="dash_text_list">
+																<li>개인정보를 처리하는 데이터베이스시스템에 대한 접근권한을 업무수행에 필요한 최소한의 범위로 업무 담당자에 따라 차등 부여하고 있습니다.
+																	인사이동 등 권한 변경 사항이 발생하는 경우 지체 없이 접근 권한을 변경 또는 말소하며 접근권한의 부여, 변경 또는 말소에 대한 내역은
+																	일정기간 보관되고 있습니다. 또한 개인정보 유출 예방 및 대응을 위하여 개인정보취급자 별로 사용자 계정을 발급하여 관리하고 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">3.</span>
+														<div class="indent_cont">
+															접속기록의 보관 및 위·변조
+															<ul class="dash_text_list">
+																<li>개인정보처리시스템에 접속한 기록을 최소 6개월 이상 보관·관리하고 있으며, 접속기록이 위·변조 및 도난, 분실되지 않도록 관리하고 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">4.</span>
+														<div class="indent_cont">
+															개인정보의 암호화
+															<ul class="dash_text_list">
+																<li>개인정보는 암호화 등을 통해 안전하게 저장 및 관리되고 있습니다. 또한 중요한 데이터는 저장 및 전송시 암호화하여 사용하는 등의 별도
+																	보안기능을 사용하고 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">5.</span>
+														<div class="indent_cont">
+															보안프로그램 설치 및 주기적 점검·갱신
+															<ul class="dash_text_list">
+																<li>해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적으로 갱신·점검하고 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">6.</span>
+														<div class="indent_cont">
+															물리적 안전 조치
+															<ul class="dash_text_list">
+																<li>개인정보를 보관하고 있는 개인정보처리시스템의 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립·운영하고 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">7.</span>
+														<div class="indent_cont">
+															접근통제
+															<ul class="dash_text_list">
+																<li>정보통신망을 통해 개인정보를 처리하는 데이터베이스시스템에 대한 인가되지 않은 불법적인 접근을 차단하기 위한 침입차단시스템을 이용하고
+																	있습니다. 또한 네트워크 트래픽의 통제(Monitoring)는 물론 불법적으로 정보를 변경하는 등의 시도를 탐지하고 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">8.</span>
+														<div class="indent_cont">
+															관리용 단말기의 안전조치 방지
+															<ul class="dash_text_list">
+																<li>상의는 개인정보처리시스템의 관리, 운영, 개발, 보안 등의 목적으로 사용되는 관리용 단말기에 대하여 해당 직원에 한하여 접근을 허용하고
+																	보안 프로그램을 최신 상태로 유지하는 등 안전한 관리를 위한 조치를 취하고 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">9.</span>
+														<div class="indent_cont">
+															재해,재난 대비 안전조치
+															<ul class="dash_text_list">
+																<li>상의는 화재, 홍수, 단전 등의 재해, 재난 발생 시 개인정보처리시스템 보호를 위한 위기대응 매뉴얼 등 대응절차를 마련하고 있으며 모의훈련
+																	등을 통해 그 적정성을 정기적으로 점검하고 있습니다.</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+
+							<h4>제9조(개인정보 보호책임자)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											상의는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+										</div>
+									</div>
+									<div class="scroll_table_wrap">
+										<table>
+											<tbody>
+												<tr>
+													<th>구분</th>
+													<th>담당부서</th>
+													<th>성명/직위</th>
+													<th>전화</th>
+													<th>이메일</th>
+												</tr>
+												<tr>
+													<td>개인정보보호책임자</td>
+													<td>감사실</td>
+													<td>김태연/실장</td>
+													<td>02-6050-3107</td>
+													<td>07387@korcham.net</td>
+												</tr>
+												<tr>
+													<td>개인정보보호 분야별 책임자</td>
+													<td>데이터정보팀</td>
+													<td>김성열/팀장</td>
+													<td>02-6050-1480</td>
+													<td>dongza@korcham.net</td>
+												</tr>
+												<tr>
+													<td>개인정보보호담당자</td>
+													<td>데이터정보팀</td>
+													<td>박기철/과장</td>
+													<td>02-6050-1482</td>
+													<td>notnull@korcham.net</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">②</span>
+										<div class="indent_cont">개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 상의는 정보주체의 문의에 대해 지체없이 답변 및 처리해드릴 것입니다.</div>
+									</div>
+								</li>
+							</ul>
+
+							<h4>제10조(개인정보 열람청구)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											정보주체는 개인정보 보호법 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다. 상의는 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">▶</span>
+														<div class="indent_cont">
+															개인정보 열람청구 접수·처리 부서명: 데이터정보팀
+															<ul class="indent_item_list">
+																<li>
+																	<div class="indent_item">
+																		<span class="indent_bullet">1.</span>
+																		<div class="indent_cont">
+																			담당자: 전요한
+																			<ul class="dash_text_list">
+																				<li>연락처: 전화번호 02-6050-1482, 이메일: notnull@korcham.net</li>
+																			</ul>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">②</span>
+										<div class="indent_cont">
+											정보주체께서는 제1항의 열람청구 접수·처리부서 이외에, 행정자치부의 ‘개인정보보호 종합지원 포털’ 웹사이트(<a href="https://www.privacy.go.kr" target="_blank">https://www.privacy.go.kr</a>)를 통하여서도 개인정보 열람청구를 하실 수 있습니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">▶</span>
+														<div class="indent_cont">
+															행정자치부 개인정보보호 종합포털 → 개인정보 민원 → 개인정보 열람등 요구<br>(공공아이핀을 통한 실명인증 필요)
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<h4>제11조(권익침해 구제방법)</h4>
+							<p class="terms_para">정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다.</p>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">▶</span>
+										<div class="indent_cont">
+											개인정보 침해신고센터: (국번없이) 118 (<a href="http://privacy.kisa.or.kr" target="_blank">http://privacy.kisa.or.kr</a>)
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">▶</span>
+										<div class="indent_cont">
+											개인정보 분쟁조정위원회: (국번없이) 1833-6972 (<a href="http://www.kopico.go.kr" target="_blank">http://www.kopico.go.kr</a>)
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">▶</span>
+										<div class="indent_cont">
+											대검찰청 사이버수사과: 02-3480-2000 (<a href="http://www.spo.go.kr" target="_blank">http://www.spo.go.kr</a>)
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">▶</span>
+										<div class="indent_cont">
+											경찰청 사이버안전국: (국번없이) 182 (<a href="http://cyberbureau.police.go.kr" target="_blank">http://cyberbureau.police.go.kr</a>)
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<h4>제12조(개인정보 처리방침 변경)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											이 개인정보 처리방침은 2021. 12. 20.부터 적용됩니다.
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<h4>제13조(인터넷 접속정보파일 등 개인정보를 자동으로 수집하는 장치의 설치, 운영 및 그 거부에 관한 사항)</h4>
+							<ul class="indent_item_list">
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">①</span>
+										<div class="indent_cont">
+											상의는 인터넷 접속정보파일 등 다음의 개인정보를 자동으로 수집하며, 홈페이지 이용자에게 개인형 서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다.
+											<ul class="indent_item_list">
+												<li>
+													<div class="indent_item">
+														<span class="indent_bullet">▶</span>
+														<div class="indent_cont">
+															자동 수집 정보 : IP Address, 쿠키, 방문 일시, 서비스 이용 기록, 부정 이용 기록
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indent_item">
+										<span class="indent_bullet">②</span>
+										<div class="indent_cont">
+											상의에서 사용하는 쿠키는 인터넷 웹사이트의 방문기록을 남겨 사용자와 웹사이트 사이를 매개해주는 정보로, 이용자들의 컴퓨터 내 하드디스크에 저장되기도 합니다.
+											<ul class="dot_text_list">
+												<li>쿠키 사용 목적 : 자주 찾는 서비스를 설정할 수 있도록 하여 이용자에게 최적화된 정보 제공을 위해 사용</li>
+												<li>쿠키의 설치,운영 및 거부 : 웹브라우저 상단의 도구 > 인터넷 옵션 > 개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부할 수 있습니다.</li>
+												<li>쿠키 저장을 거부할 경우 개인형 서비스 이용에 어려움이 발생할 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //  -->
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close dtype2"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // 개인정보처리방침 -->
+		<script>
+			document.querySelector("#popup_call_person").addEventListener("click", (e) => {
+				e.preventDefault();
+				var personPopup = new DesignPopup({
+					selector: "#person_popup"
+				});
+			});
+		</script>
+	</div>
+</body>
+
+</html>
