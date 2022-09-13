@@ -680,9 +680,9 @@ function scToggleList() {
           element.classList.remove("active");
         });
         thisLiObj.classList.toggle("active");
-        if (thisLiObj.classList.contains("active")) {
-          window.scrollTo(0, thisLiObj.getBoundingClientRect().top + window.scrollY - headerHeight);
-        }
+        // if(thisLiObj.classList.contains("active")){
+        //   window.scrollTo(0 , thisLiObj.getBoundingClientRect().top + window.scrollY - headerHeight);
+        // }
       }, false);
     });
   }

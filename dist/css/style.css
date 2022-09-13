@@ -4574,7 +4574,7 @@ input.native_formitem::-webkit-inner-spin-button, input.native_formitem::-webkit
 .dia_box {
   background: #f6f8f9;
   border: 1px solid #dcdcdc;
-  padding: 1.5rem 0.75rem;
+  padding: 1rem 1.8125rem 1.75rem 1rem;
   margin-top: 1.5rem;
   text-align: center;
 }
@@ -5147,10 +5147,11 @@ input[type=number].codeform_input::-webkit-inner-spin-button {
 .current_keyword_list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -0.5rem;
 }
 
 .current_keyword_list > li {
-  margin: 0.3125rem 1rem 0 0;
+  margin: 0 1rem 0.5rem 0;
 }
 
 .current_keyword {
@@ -5539,7 +5540,7 @@ textarea.form_textarea {
 .icon_detail_list_wrap {
   margin-bottom: 1.5rem;
   border-top: 1px dotted #bcbcbc;
-  padding: 1.25rem 0.5rem 0;
+  padding: 1.5rem 0.5rem 0;
 }
 
 .icon_detail_list {
@@ -5586,15 +5587,14 @@ textarea.form_textarea {
 
 .icon_detail_label_text {
   font-size: 0.875rem;
-  color: #404040;
+  color: #878787;
   margin-left: 0.5rem;
   transform: skew(0.5deg);
 }
 
 .icon_detail_data {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #191919;
-  font-weight: 600;
   transform: skew(0.5deg);
 }
 
@@ -5981,7 +5981,7 @@ input.sc_search_input::input-placeholder {
   color: #191919;
   line-height: 1.4;
   transform: skew(0.5deg);
-  margin: 1rem 0 1.25rem;
+  margin: 1rem 0 1.5rem;
 }
 .viewskin_content img {
   max-width: 100%;
