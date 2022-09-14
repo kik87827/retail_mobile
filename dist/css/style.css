@@ -5861,7 +5861,7 @@ input.sc_search_input::input-placeholder {
 }
 .sc_toggle_list > li.active .sc_toggle_bar:after {
   transform: translateZ(0) rotate(225deg);
-  top: 1.5rem;
+  top: 1.625rem;
 }
 .sc_toggle_list > li.active:after {
   display: none;
@@ -5884,8 +5884,9 @@ input.sc_search_input::input-placeholder {
   display: flex;
   padding: 1rem 2.5rem 1rem 1rem;
   position: relative;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #191919;
+  transform: skew(0.5deg);
 }
 .sc_toggle_bar:after {
   display: block;
@@ -5895,7 +5896,7 @@ input.sc_search_input::input-placeholder {
   border-right: 1px solid #1c1c1c;
   border-bottom: 1px solid #1c1c1c;
   position: absolute;
-  top: 1.1875rem;
+  top: 1.3125rem;
   right: 1.4375rem;
   transform: translateZ(0) rotate(45deg);
 }
@@ -5904,6 +5905,7 @@ input.sc_search_input::input-placeholder {
   flex: 0;
   white-space: nowrap;
   margin-right: 0.25rem;
+  color: #0C4A96;
 }
 
 .sc_toggle_text {
@@ -5931,7 +5933,7 @@ input.sc_search_input::input-placeholder {
 }
 
 .sc_toggle_content_in {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 2.25rem;
 }
 
 .viewskin_wrap {
@@ -5944,6 +5946,7 @@ input.sc_search_input::input-placeholder {
   line-height: 1.4;
   transform: skew(0.5deg);
   padding: 1rem 0;
+  font-weight: 600;
 }
 .viewskin_else_wrap {
   background: #f6f8f9;
