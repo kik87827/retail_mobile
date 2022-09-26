@@ -770,9 +770,7 @@ function nativeDate(option) {
     element.addEventListener("change", (e) => {
       let thisObj = e.currentTarget;
       formatValue(thisObj);
-      if (option.callback !== undefined) {
-        option.callback();
-      }
+      console.log(option)
     }, false);
     element.addEventListener("click", (e) => {
 
